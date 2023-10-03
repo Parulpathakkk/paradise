@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/output.css" />
         <!-- Link Swiper's CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
         <!-- aos -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -179,7 +179,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-pagination cursor-pointer"></div>
+                            <div class="swiper-pagination "></div>
                         </div>
                     </div>
                 </div>
@@ -189,7 +189,7 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
         <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
         <script>
              AOS.init();
@@ -199,6 +199,7 @@
             var swiper = new Swiper(".mySwiper", {
                 pagination: {
                     el: ".swiper-pagination",
+                    clickable:true, 
                 },
                 breakpoints: {
                     640: {
