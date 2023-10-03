@@ -12,7 +12,7 @@
         <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
         <title>Paradise</title>
     </head>
-    <body >
+    <body x-data="{gradient : false}">
         <section class="min-h-screen w-full relative">
             <div class="px-[2cqw] z-10 flex justify-between items-end bg-white">
                 <div class="py-[1.8cqw]">
@@ -24,16 +24,21 @@
                     <a href class="py-[1.8cqw]"><p>TREKS</p></a>
                     <a href class="py-[1.8cqw]"><p>RENT GEAR</p></a>
                     <a href class="py-[1.8cqw]"><p>ABOUT</p></a>
-                    <a href class="py-[1.8cqw] flex gap-[1cqw] px-[3cqw] 2xl:px-[2cqw] rounded-t-[2cqw] bg-gradient-to-r from-[#d97a33] to-[#D57128] text-white relative">
-                        <img class="absolute bottom-0 right-full" src="./assets/images/curve.svg" alt="" />
+                    <div  @mouseover="gradient=true" @mouseleave="gradient=false" class="cursor-pointer py-[1.8cqw] flex gap-[1cqw] px-[4cqw] 2xl:px-[2cqw] rounded-t-[1.4cqw] bg-gradient-to-r duration-700 transition-all  text-white relative" :class="gradient?'from-[#7E82E3] to-[#6676F5]':'from-[#dc803a] to-[#D57128]'">
+                        <!-- <img class="absolute bottom-0 right-full" src="./assets/images/curve.svg" alt="" /> -->
+
+                        <svg class="absolute bottom-0 right-full " :class="gradient?'fill-[#7E82E3]': 'fill-[#dc803a]' " xmlns="http://www.w3.org/2000/svg" width="36.77" height="29.785" viewBox="0 0 36.77 29.785">
+                            <path id="Path_55403" data-name="Path 55403" d="M0,110.631H-36.77C-12.034,110.631,0,97.3,0,80.846Z" transform="translate(36.77 -80.846)" />
+                          </svg>
+                          
                         <p>TREK WITH US</p>
                         <img src="./assets/images/arrowwhite.svg" alt="" />
-                    </a>
+                    </div>
                 </div>
             </div>
 
             <!-- paradise -->
-            <div class="mx-[2cqw] mb-[2cqw] pb-[10cqh] rounded-l-[2cqw] rounded-br-[2cqw] bg-gradient-to-r from-[#FABE88] to-[#D57128] relative h-full">
+            <div class="mx-[2cqw] mb-[2cqw] pb-[10cqh] rounded-l-[2cqw] rounded-br-[2cqw] bg-gradient-to-r  relative h-full duration-700 transition-all" :class="gradient?'from-[#FABE88] to-[#6676F5]':'from-[#FABE88] to-[#D57128]' ">
                 <img class="h-full w-full object-cover pt-[5cqw]  rounded-b-[2cqw] object-top z-20 absolute" data-aos="fade-up" data-aos-duration="1000" src="assets/images/bgimage.webp" alt="" />
                 <p class="font-Besta  text-center text-white relative z-10 top-0 text-[18cqw] " data-aos="zoom-in"  data-aos-duration="1000" >Paradise</p>
                 <p class="font-Besta absolute z-[99]  right-[17%] text-white  top-[23%] 2xl:top-[21.5%] text-[4.5cqw]" data-aos="zoom-in"  data-aos-duration="1000" >on the peak</p>
@@ -49,11 +54,11 @@
                     <div class="mt-[4cqw] px-[4cqw]">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper mr-[4cqw] pb-[12cqh]">
-                                <div class="swiper-slide w-full">
-                                    <div class="w-[90%]">
+                                <div class="swiper-slide w-full ">
+                                    <div class="w-[90%] cursor-pointer group">
                                     <div class="h-[35cqh] relative">
                                         <img class="h-full w-full" src="./assets/images/pic1.webp" alt="" />
-                                        <img class="absolute top-[20%] right-0 h-[3cqw] translate-x-1/2" src="./assets/images/arroworange.svg" alt="" />
+                                        <img class="absolute  top-[20%] right-0 h-[3cqw] translate-x-1/2" src="./assets/images/arroworange.svg" alt="" />
                                     </div>
                                     <p class="font-Helvetica-med text-white leading-[1.2] mt-[1cqw] text-[1.1cqw]">
                                         SWARGA <br />
@@ -65,8 +70,9 @@
                                     </div>
                                 </div>
                                 </div>
+
                                 <div class="swiper-slide w-full">
-                                    <div class="w-[90%]">
+                                    <div class="w-[90%] cursor-pointer">
                                     <div class="h-[35cqh] relative">
                                         <img class="h-full w-full" src="./assets/images/pic2.webp" alt="" />
                                         <img class="absolute bottom-[20%] right-0 h-[3cqw] translate-x-1/2" src="./assets/images/arroworange.svg" alt="" />
@@ -82,7 +88,7 @@
                                     </div>
                                 </div>
                                 <div class="swiper-slide w-full">
-                                    <div class="w-[90%]">
+                                    <div class="w-[90%] cursor-pointer">
                                     <div class="h-[35cqh] relative">
                                         <img class="h-full w-full" src="./assets/images/pic1.webp" alt="" />
                                         <img class="absolute top-[20%] right-0 h-[3cqw] translate-x-1/2" src="./assets/images/arroworange.svg" alt="" />
@@ -98,7 +104,7 @@
                                 </div>
                                 </div>
                                 <div class="swiper-slide w-full">
-                                    <div class="w-[90%]">
+                                    <div class="w-[90%] cursor-pointer">
                                     <div class="h-[35cqh] relative">
                                         <img class="h-full w-full" src="./assets/images/pic2.webp" alt="" />
                                         <img class="absolute bottom-[20%] right-0 h-[3cqw] translate-x-1/2" src="./assets/images/arroworange.svg" alt="" />
@@ -115,7 +121,7 @@
                                 </div>
 
                                 <div class="swiper-slide w-full">
-                                    <div class="w-[90%]">
+                                    <div class="w-[90%] cursor-pointer">
                                     <div class="h-[35cqh] relative">
                                         <img class="h-full w-full" src="./assets/images/pic1.webp" alt="" />
                                         <img class="absolute top-1/2 -translate-y-1/2 right-0 h-[3cqw] translate-x-1/2" src="./assets/images/arroworange.svg" alt="" />
@@ -131,7 +137,7 @@
                                 </div>
                                 </div>
                                 <div class="swiper-slide w-full">
-                                    <div class="w-[90%]">
+                                    <div class="w-[90%] cursor-pointer">
                                     <div class="h-[35cqh] relative">
                                         <img class="h-full w-full" src="./assets/images/pic2.webp" alt="" />
                                         <img class="absolute top-1/2 -translate-y-1/2 right-0 h-[3cqw] translate-x-1/2" src="./assets/images/arroworange.svg" alt="" />
@@ -147,7 +153,7 @@
                                     </div>
                                 </div>
                                 <div class="swiper-slide w-full">
-                                    <div class="w-[90%]">
+                                    <div class="w-[90%] cursor-pointer">
                                     <div class="h-[35cqh] relative">
                                         <img class="h-full w-full" src="./assets/images/pic1.webp" alt="" />
                                         <img class="absolute top-1/2 -translate-y-1/2 right-0 h-[3cqw] translate-x-1/2" src="./assets/images/arroworange.svg" alt="" />
@@ -163,7 +169,7 @@
                                 </div>
                                 </div>
                                 <div class="swiper-slide w-full">
-                                    <div class="w-[90%]">
+                                    <div class="w-[90%] cursor-pointer">
                                     <div class="h-[35cqh] relative">
                                         <img class="h-full w-full" src="./assets/images/pic2.webp" alt="" />
                                         <img class="absolute top-1/2 -translate-y-1/2 right-0 h-[3cqw] translate-x-1/2" src="./assets/images/arroworange.svg" alt="" />
@@ -187,6 +193,8 @@
         </section>
         <!-- aos -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- alpine -->
+        <script src="//unpkg.com/alpinejs" defer></script>
 
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
