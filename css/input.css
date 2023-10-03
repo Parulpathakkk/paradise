@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Besta';
+    src: url("../assets/fonts/Bestagrach.ttf");
+}
+@font-face {
+    font-family: 'Helvetica';
+    src: url("../assets/fonts/HelveticaNeue\ Regular.ttf");
+}
+@font-face {
+    font-family: 'Helvetica med';
+    src: url("../assets/fonts/Helvetica\ Neue\ Medium\ Extended.ttf");
+}
+
+.font-Besta{
+    font-family: 'Besta';
+}
+.font-Helvetica{
+    font-family: 'Helvetica';
+}
+.font-Helvetica-med{
+    font-family: 'Helvetica med';
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.2cqw;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #d7762e; 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d7762e; 
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: white !important;
+}
+  .swiper-pagination-bullet {
+    background-color: #9a9896 !important;
+   margin-left: 0.5cqw !important;
+   opacity: 1000 !important;
+    width: 0.8cqw !important;
+    height: 0.8cqw !important;
+}
